@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Hover Sağa Kayma</title>
+<style>
+    body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .kutu {
+        width: 150px;
+        height: 150px;
+        background-color: #3498db;
+        border-radius: 10px;
+        transition: transform 1s ease; /* Yumuşak geçiş */
+    }
+
+    /* Mouse gelince sağa kayma */
+    .kutu:hover {
+        transform: translateX(100px); /* 100px sağa kaydır */
+    }
+</style>
+</head>
+<body>
+
+<div class="kutu"></div>
+
+</body>
+</html>

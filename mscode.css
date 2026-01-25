@@ -1,0 +1,591 @@
+:root {
+        --glow-color: hsl(175, 87%, 48%);
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #212121;
+        background-image: url(resim/k28.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        justify-content: center;
+        
+      }
+
+      /* nav {
+        width: 300px;
+        background: rgb(36, 241, 241);
+        color: rgba(5, 5, 5, 0.87);
+        -webkit-clip-path: circle(24px at 30px 24px);
+        clip-path: circle(24px at 32px 24px);
+        -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+        transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+        position: relative;
+        top: 10px;
+        left: 4px;
+      }
+
+      nav:hover {
+        height: 92%;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        -webkit-transition-duration: 0.75s;
+        transition-duration: 0.75s;
+        -webkit-clip-path: circle(390px at 225px 24px);
+        clip-path: circle(390px at 150px 24px);
+        background: rgb(60, 240, 240);
+      }
+
+      a {
+        display: block;
+        line-height: 50px;
+        padding: 0 20px;
+        color: inherit;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      a:hover {
+        background: #78909c;
+      }
+      a:active {
+        background: mediumpurple;
+      }
+
+      .navicon {
+        padding: 23px 20px;
+        cursor: pointer;
+        -webkit-transform-origin: 32px 24px;
+        -ms-transform-origin: 32px 24px;
+        transform-origin: 32px 24px;
+      }
+
+      .navicon div {
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.87);
+      }
+
+      .navicon div:before,
+      .navicon div:after {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.87);
+        position: absolute;
+      }
+
+      .navicon div:before {
+        top: -7px;
+      }
+      .navicon div:after {
+        top: 7px;
+      } */
+
+      .pan1 {
+        width: 100%;
+        height: 300px;
+        /* background-image: url(resim/k18.jpg);
+        background-attachment: no;
+        background-repeat: no-repeat;
+        background-size: 100% 100%; */
+      }
+
+      .pan2 {
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.6;
+        filter: alpha(opacity=80);
+      }
+
+      .pan3 {
+        width: 10cap;
+        height: 100%;
+        position: relative;
+        left: 0%;
+        /* border: solid 2px red; */
+      }
+
+      /* .pan4 {
+        width: 22%;
+        height: 100%;
+        border: solid 2px red;
+        position: relative;
+        left: 78%;
+        top: -100%;
+      } */
+
+      /* .pan5 {
+        width: 100%;
+        height: 50%;
+        border: solid 2px red;
+        background-image: url(resim/logo2.png);
+        background-attachment: no;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation: logo 4s linear infinite;
+      } */
+
+      @keyframes logo {
+        50% {
+          opacity: 0;
+        }
+      }
+      /* .pan6 {
+        width: 100%;
+        height: 48%;
+        border: solid 2px teal;
+      } */
+
+      .pan8{
+        width: 28%;
+        height: 14%;
+        /* border: double 2px red; */
+        position: relative;
+        left: 70%;
+        top: -100%;
+      }
+
+      .btnglow {
+        width: 100%;
+        position: relative;
+        color: var(--glow-color);
+        cursor: pointer;
+        justify-content: center;
+        padding: 0;
+        border: 2px solid var(--glow-color);
+        background: none;
+        border-radius: 0.45em;
+        perspective: 2em;
+        font-family: "Releway", sans-serif;
+        font-size: 2em;
+        font-weight: 4;
+        top: 8%;
+        left: 0%;
+        letter-spacing: 8px;
+        box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        animation: border-flicker 2s linear infinite;
+      }
+
+      .glowing_btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.7;
+        filter: blur(1em);
+        transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+        background: var(--glow-color);
+        pointer-events: none;
+      }
+
+      .glowing_btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+        background-color: var(--glow-color);
+        box-shadow: 0 0 2em 0.2em var(--glow-color);
+        transition: opacity 100ms linear;
+      }
+
+      .glowing_txt {
+        /* float: top; */
+        margin-right: -0.4em;
+        text-shadow: 0 0 0.45em hsl(0 0% 100% / 0.3),
+          0 0 0.45em var(--glow-color);
+          animation: text-flicker 3s linear infinite;
+          color: rgb(0, 162, 255);
+          justify-content: center;
+      }
+
+      .faulty_letter {
+        opacity: 0.5;
+        animation: faulty-flicker 3s linear infinity;
+      }
+
+      .glowing_btn:hover {
+        color: rgba(0, 0, 0, 0.8);
+        text-shadow: none;
+        animation: none;
+      }
+
+      .glowing_btn:hover .glowing_txt {
+        animation: none;
+      }
+
+      .glowing_btn:hover .faulty_letter {
+        animation: none;
+        text-shadow: none;
+        opacity: 1;
+      }
+
+      .glowing_btn:hover::before {
+        filter: blur(1.5em);
+        opacity: 1;
+      }
+
+      .glowing_btn:hover::after {
+        opacity: 1;
+      }
+
+      @keyframes faulty-flicker {
+        0% {
+          opacity: 0.1;
+        }
+        2% {
+          opacity: 0.1;
+        }
+        4% {
+          opacity: 0.5;
+        }
+        19% {
+          opacity: 0.5;
+        }
+        21% {
+          opacity: 0.1;
+        }
+        23% {
+          opacity: 0.1;
+        }
+        80% {
+          opacity: 0.5;
+        }
+        83% {
+          opacity: 0.4;
+        }
+        87% {
+          opacity: 0.1;
+        }
+      }
+
+      @keyframes text-flicker {
+        0% {
+          opacity: 0.1;
+        }
+        2% {
+          opacity: 1;
+        }
+        8% {
+          opacity: 0.1;
+        }
+        9% {
+          opacity: 1;
+        }
+        12% {
+          opacity: 0.1;
+        }
+        20% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 0.3;
+        }
+        30% {
+          opacity: 1;
+        }
+        70% {
+          opacity: 0.7;
+        }
+        72% {
+          opacity: 0.2;
+        }
+        77% {
+          opacity: 0.9;
+        }
+        100% {
+          opacity: 0.9;
+        }
+      }
+
+      @keyframes border-flicker {
+        0% {
+          opacity: 0.1;
+        }
+        2% {
+          opacity: 1;
+        }
+        4% {
+          opacity: 0.1;
+        }
+        8% {
+          opacity: 1;
+        }
+        70% {
+          opacity: 0.7;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+/* 
+       .liquid{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:
+    radial-gradient(circle at 20% 30%, #ff6ec7, transparent 45%),
+    radial-gradient(circle at 80% 30%, #7cffcb, transparent 45%),
+    radial-gradient(circle at 80% 30%, black, transparent 45%),
+    radial-gradient(circle at 40% 70%, #5f9cff, transparent 45%),
+    radial-gradient(circle at 40% 70%, red, transparent 45%),
+    radial-gradient(circle at 90% 60%, yellow, transparent 45%);
+    filter: blur(80px);
+    animation: morph 4s ease-in-out infinite alternate-reverse;
+    justify-content: center;
+} */
+
+/* .b1{
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+        opacity: 0.4;
+        filter: alpha(opacity=80);
+        justify-content: center;
+} */
+
+
+.btn{
+  width: 14rcap;
+  height: 300px;
+  justify-content: center;
+  /* border: solid 2px red; */
+  border-radius: 20px;
+  /* gap: 8em; */
+  display: content;
+}
+
+
+.container1{
+  width: 100%;
+  height: 40px;
+  /* border: solid 2px red; */
+  border-radius: 10cap;
+  position: relative;
+  top: 12px;
+  transition: transform 1s ease;
+}
+
+
+.container1:hover{
+  transform: translateX(18px);
+  /* background-color: aqua; */
+  background-image: url(resim/k10.jpg);
+  background-attachment: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 0 4px aqua,
+              0 0 8px aqua,
+              0 0 10px aqua,
+              0 0 14px aqua;
+}
+
+.a1{
+  width: 100%;
+  height: 36px;
+  /* border: solid 2px aqua; */
+  display: flex;
+  border-radius: 10cap;
+  justify-content: center;
+  line-height: 180%;
+  color: aqua;
+  background-color: #212121;
+}
+
+a:hover{
+  color: red;
+  background-color: transparent;
+}
+
+
+.container2{
+  width: 100%;
+  height: 40px;
+  /* border: solid 2px red; */
+  border-radius: 10cap;
+  position: relative;
+  top: 22px;
+  transition: transform 1s ease;
+}
+
+.container2:hover{
+  transform: translateX(18px);
+  /* background-color: aqua; */
+  background-image: url(resim/k2.jpg);
+  background-attachment: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 0 4px aqua,
+              0 0 8px aqua,
+              0 0 10px aqua,
+              0 0 14px aqua;
+}
+.a2{
+  width: 100%;
+  height: 36px;
+  /* border: solid 2px aqua; */
+  display: flex;
+  border-radius: 10cap;
+  justify-content: center;
+  line-height: 180%;
+  color: aqua;
+  background-color: #212121;
+}
+
+
+.container3{
+  width: 100%;
+  height: 40px;
+  /* border: solid 2px red; */
+  border-radius: 10cap;
+  position: relative;
+  top: 28px;
+  transition: transform 1s ease;
+}
+
+.container3:hover{
+  transform: translateX(18px);
+  /* background-color: aqua; */
+  background-image: url(resim/k8.jpg);
+  background-attachment: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 0 4px aqua,
+              0 0 8px aqua,
+              0 0 10px aqua,
+              0 0 14px aqua;
+}
+.a3{
+  width: 100%;
+  height: 36px;
+  /* border: solid 2px aqua; */
+  display: flex;
+  border-radius: 10cap;
+  justify-content: center;
+  line-height: 180%;
+  color: aqua;
+  background-color: #212121;
+}
+
+
+.container4{
+  width: 100%;
+  height: 40px;
+  /* border: solid 2px red; */
+  border-radius: 10cap;
+  position: relative;
+  top: 34px;
+  transition: transform 1s ease;
+}
+
+.container4:hover{
+  transform: translateX(18px);
+  /* background-color: aqua; */
+  background-image: url(resim/k4.jpg);
+  background-attachment: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 0 4px aqua,
+              0 0 8px aqua,
+              0 0 10px aqua,
+              0 0 14px aqua;
+}
+.a4{
+  width: 100%;
+  height: 36px;
+  /* border: solid 2px aqua; */
+  display: flex;
+  border-radius: 10cap;
+  justify-content: center;
+  line-height: 180%;
+  color: aqua;
+  background-color: #212121;
+}
+
+
+.container5{
+  width: 100%;
+  height: 40px;
+  /* border: solid 2px red; */
+  border-radius: 10cap;
+  position: relative;
+  top: 40px;
+  transition: transform 1s ease;
+}
+
+.container5:hover{
+  transform: translateX(18px);
+  /* background-color: aqua; */
+  background-image: url(resim/k5.jpg);
+  background-attachment: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 0 4px aqua,
+              0 0 8px aqua,
+              0 0 10px aqua,
+              0 0 14px aqua;
+}
+.a5{
+  width: 100%;
+  height: 36px;
+  /* border: solid 2px aqua; */
+  display: flex;
+  border-radius: 10cap;
+  justify-content: center;
+  line-height: 180%;
+  color: aqua;
+  background-color: #212121;
+}
+
+
+.container6{
+  width: 100%;
+  height: 40px;
+  /* border: solid 2px red; */
+  border-radius: 10cap;
+  position: relative;
+  top: 46px;
+  transition: transform 1s ease;
+}
+
+.container6:hover{
+  transform: translateX(18px);
+  /* background-color: aqua; */
+  background-image: url(resim/k6.jpg);
+  background-attachment: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0 0 4px aqua,
+              0 0 8px aqua,
+              0 0 10px aqua,
+              0 0 14px aqua;
+}
+.a6{
+  width: 100%;
+  height: 36px;
+  /* border: solid 2px aqua; */
+  display: flex;
+  border-radius: 10cap;
+  justify-content: center;
+  line-height: 180%;
+  color: aqua;
+  background-color: #212121;
+}
